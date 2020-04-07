@@ -1,0 +1,10 @@
+//File reading method for Loading data into a Array list which contains String.
+    private void ArraylistFileLoad(ArrayList<String> arrayList, String filePath) throws IOException {
+        String line;                                                                       //String variable to store reading line value.
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));              //creating a new buffer reader and passing the file path.
+        while ((line = reader.readLine()) != null)                                         //until for a empty line.
+        {
+            arrayList.add(line);                                                           //Inserting data to array list.
+        }
+        reader.close();                                                                    //Closing the Reader.
+    }

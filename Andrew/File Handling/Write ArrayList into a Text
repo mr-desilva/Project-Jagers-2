@@ -1,0 +1,16 @@
+ //File writing method for Array list contains String.
+    private void ArraylistFileWrite(ArrayList<String> arrayList, String filepath) {
+        FileWriter fileWriter;                                                                              //Creating a file writer.
+        try {
+            fileWriter = new FileWriter(filepath);                                                          //Passing the file path to the file writer.
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);                                 //Creating a buffer reader.
+            for (String seats : arrayList) {                                                                //for the each element in the String array list.
+                bufferedWriter.write(seats);                                                                //will write the each seat to the text file.
+                bufferedWriter.newLine();                                                                   //line by line.
+            }
+            bufferedWriter.close();                                                                         //Closing the buffer writer.
+        } catch (IOException e) {
+            System.out.println("A n error occurred.");                                                      //Error message for interruptions during the file writing process.
+        }
+
+    }

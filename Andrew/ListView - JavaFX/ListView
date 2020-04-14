@@ -1,0 +1,26 @@
+==============================================================================
+//Creating the List View
+ListView listView = new ListView();
+
+//Adding Elements to the List View
+listView.getItems().add("Item 1");
+listView.getItems().add("Item 2");
+listView.getItems().add("Item 3");
+
+//Resize the List View
+listView.setPrefSize(width,height);
+
+//============================================================================
+List view will print data line by line.                                      
+you have to set a label for your 1st row if you have multiple coloumns.     
+eg- Label listView_Heading = new Label("Passenger\t\tSeat Number");
+	listView.getItems().add("Andrew\t\t23");
+	
+	or you can use -
+  ============================================
+	String name = andrew;
+	int seat = 23;
+	listView.getItems().add(name+"\t\t"+seat);
+	
+	
+~ANDREW~
